@@ -1,7 +1,7 @@
 package transport;
 
 
-public class Car extends Transport implements Competing {
+public class Car extends Transport implements  Competing {
     private TypeOfBody typeOfBody;
     public Car(String brand, String model, double engineVolume, TypeOfBody typeOfBody) {
         super(brand, model, engineVolume);
@@ -40,6 +40,11 @@ public class Car extends Transport implements Competing {
     @Override
     public boolean service() {
         return Math.random()>0.3;
+    }
+
+    @Override
+    public void repair() {
+        System.out.println("Машина" + getBrand() +getModel() + " починена ");
     }
 
 
