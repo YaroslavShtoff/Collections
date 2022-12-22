@@ -3,12 +3,12 @@ package transport.driver;
 import transport.Transport;
 
 public abstract class  Driver<T extends Transport> {
-    private  final String name;
+    private final String name;
     private boolean hasDrivingLicense;
     private int experience;
     private String category;
 
-    public Driver(String name, boolean hasDrivingLicense, int experience,String category) {
+    public Driver(String name, boolean hasDrivingLicense, int experience, String category) {
         this.name = name;
         this.hasDrivingLicense = hasDrivingLicense;
         this.experience = experience;
@@ -20,7 +20,7 @@ public abstract class  Driver<T extends Transport> {
     }
 
     public void setCategory(String category) {
-         if (category == null) {
+        if (category == null) {
             throw new IllegalArgumentException("Необходимо указать  тип прав");
         }
 
@@ -54,6 +54,12 @@ public abstract class  Driver<T extends Transport> {
     public abstract void refill(T transport);
 
     public void printInfo(T transport) {
-        System.out.println("водитель " +name+ " управляет автомобилем" +transport.getBrand()+ "и будет участвовать в заезде");
+        System.out.println("водитель " + name + " управляет автомобилем" + transport.getBrand() + "и будет участвовать в заезде");
+    }
+
+    @Override
+    public String toString() {
+        return name + ", стаж вождения" + experience + "лет, категория" + category;
+
     }
 }

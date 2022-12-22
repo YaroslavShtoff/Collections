@@ -48,6 +48,10 @@ public class Bus extends Transport implements Competing {
     public void pitStop() {
         System.out.println("Автобус прошел пит-стоп");
     }
+    @Override
+    public void repair() {
+        System.out.println("Автобус" + getBrand() +getModel() + " починен ");
+    }
 
     @Override
     public int bestTimeLap() {

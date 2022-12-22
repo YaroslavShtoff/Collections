@@ -23,6 +23,7 @@ public class Track extends Transport implements Competing {
 
     }
 
+
     @Override
     public void stop() {
         System.out.println("Автомобиль \"" + getBrand() +"\" (\"" + getModel() + "\") окончил движение");
@@ -49,6 +50,10 @@ public class Track extends Transport implements Competing {
     @Override
     public void pitStop() {
         System.out.println("Грузовик прошел пит-стоп");
+    }
+    @Override
+    public void repair() {
+        System.out.println("Грузовик" + getBrand() +getModel() + " починен ");
     }
 
     @Override
