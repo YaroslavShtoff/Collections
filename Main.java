@@ -15,7 +15,7 @@ import java.util.List;
             for (int i = 0; i < 8; i++) {
                 biDemArrList.add(i, new ArrayList<>());
                 for (int j = 0; j < 8; j++) {
-                    biDemArrList.get(i).add(j, ((i + j) % 2 ==1:"◙":"◯" ));
+                    biDemArrList.get(i).add(j, ((i + j) % 2 ==1:"◙":"◯"));
                 }
             }
             for (int i = 0; i < 8; i++) {
